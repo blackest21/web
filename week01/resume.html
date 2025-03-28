@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이력서</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .resume {
+            width: 800px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            background: #f4a72c;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            border-radius: 10px 10px 0 0;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 2px solid #f4a72c;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        .info-table, .list-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .info-table td {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+        .list-table th, .list-table td {
+            padding: 8px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="resume">
+        <div class="header">이력서</div>
+        <div class="section">
+            <div class="section-title">개인정보</div>
+            <div class="profile">
+                   <img src=
+"data:image/jpeg;base64,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" alt="프로필 사진">
+                <table class="info-table">
+                    <tr><td>이름</td><td>조현우</td><td>성별</td><td>남</td></tr>
+                    <tr><td>생년월일</td><td>1994.02.21</td><td>이메일</td><td>blackest21@gmail.com</td></tr>
+                    <tr><td>주소</td><td colspan="3">부산광역시 OO동 OOO-OO번지</td></tr>
+                    <tr><td>전화번호</td><td colspan="3">010-000-0000</td></tr>
+                </table>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-title">학력사항</div>
+            <table class="list-table">
+                <tr><th>기간</th><th>학교</th><th>전공</th></tr>
+                <tr><td>2024 - 2028</td><td>동의대학교</td><td>응용소프트웨어공학과</td></tr>
+                <tr><td>2028 - 2030</td><td>OO대학교 대학원</td><td>컴퓨터과학과</td></tr>
+                <tr><td>2030 - 2036</td><td>OO대학교 대학원</td><td>컴퓨터과학과</td></tr>
+            </table>
+        </div>
+        <div class="section">
+            <div class="section-title">수상내역</div>
+            <table class="list-table">
+                <tr><th>연도</th><th>대회명</th><th>수상 내역</th></tr>
+                <tr><td>2026</td><td>SSCP</td><td>우수상</td></tr>
+                <tr><td>2027</td><td>현대모비스 알고리즘 경진대회</td><td>우수상</td></tr>
+                <tr><td>2029</td><td>ㅇㅇ대학교 대학원</td><td>최우수논문상</td></tr>
+                <tr><td>2036</td><td>ㅇㅇ대학교 대학원</td><td>우수 졸업 논문상</td></tr>
+            </table>
+        </div>
+        <div class="section">
+            <div class="section-title">자격증</div>
+            <table class="list-table">
+                <tr><th>연도</th><th>자격증명</th><th>등급</th></tr>
+                <tr><td>2027</td><td>정보처리기사</td><td></td></tr>
+                <tr><td>2028</td><td>빅데이터분석기사</td><td></td></tr>
+            </table>
+        </div>
+        <div class="section">
+            <div class="section-title">경력사항</div>
+            <table class="list-table">
+                <tr><th>기간</th><th>회사</th><th>직무</th></tr>
+                <tr><td>2036 - 2038</td><td>ㅇㅇ대학교 대학원</td><td>박사후 연구원</td></tr>
+                <tr><td>2039 - 3043</td><td>KIST</td><td>연구원</td></tr>
+                <tr><td>2044 - 2050</td><td>KIST</td><td>선임 연구원</td></tr>
+                <tr><td>2046 - 2050</td><td>(주)omniscience</td><td>대표</td></tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

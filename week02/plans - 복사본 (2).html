@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>대학 4년 계획표 - 행 기준 병합 예시</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f8f8;
+      margin: 20px;
+      line-height: 1.4;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    .table-container {
+      width: 100%;
+      overflow-x: auto; /* 작은 화면에서 가로 스크롤 허용 */
+      margin-bottom: 2em;
+    }
+    table {
+      border-collapse: collapse;
+      min-width: 900px;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+      vertical-align: middle;
+    }
+    th {
+      background-color: #f0f0f0;
+      font-weight: bold;
+    }
+    .year-header {
+      background-color: #ddd;
+    }
+    /* 행별 클래스 (첫 번째 셀에만 적용) */
+    .volunteer td:first-child {
+      font-weight: bold;
+      background-color: #ffecec;
+    }
+    .major td:first-child {
+      font-weight: bold;
+      background-color: #ecffec;
+    }
+    .certificate td:first-child {
+      font-weight: bold;
+      background-color: #ececff;
+    }
+    .language td:first-child {
+      font-weight: bold;
+      background-color: #fffecf;
+    }
+  </style>
+</head>
+<body>
+  <h1>대학 4년 계획표 - 행 기준 병합 예시</h1>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th rowspan="2">구분</th>
+          <th class="year-header" colspan="4">1학년</th>
+          <th class="year-header" colspan="4">2학년</th>
+          <th class="year-header" colspan="4">3학년</th>
+          <th class="year-header" colspan="4">4학년</th>
+        </tr>
+        <tr>
+          <th>1학기</th>
+          <th>여름 방학</th>
+          <th>2학기</th>
+          <th>겨울 방학</th>
+          <th>1학기</th>
+          <th>여름 방학</th>
+          <th>2학기</th>
+          <th>겨울 방학</th>
+          <th>1학기</th>
+          <th>여름 방학</th>
+          <th>2학기</th>
+          <th>겨울 방학</th>
+          <th>1학기</th>
+          <th>여름 방학</th>
+          <th>2학기</th>
+          <th>겨울 방학</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- 봉사 활동 행: 예시로 1학년 1학기~여름 방학을 병합하고, 2학년 전체를 병합하는 식 -->
+        <tr class="volunteer">
+          <td>봉사 활동</td>
+          <!-- 1학년: 1학기와 여름 방학을 병합 (colspan="2") -->
+          <td colspan="2">1학년 1학기 ~ 여름 방학 봉사</td>
+          <!-- 1학년 나머지 셀은 개별 셀 -->
+          <td>1학년 2학기</td>
+          <td>1학년 겨울 방학</td>
+          <!-- 2학년 전체 병합 (colspan="4") -->
+          <td colspan="4">2학년 전체 봉사</td>
+          <!-- 3학년: 1학기는 개별, 나머지 3학년 셀 병합 (colspan="3") -->
+          <td>3학년 1학기</td>
+          <td colspan="3">3학년 나머지 봉사</td>
+          <!-- 4학년은 모두 개별 셀 -->
+          <td>4학년 1학기</td>
+          <td>4학년 여름 방학</td>
+          <td>4학년 2학기</td>
+          <td>4학년 겨울 방학</td>
+        </tr>
+        <!-- 전공 공부 행: 예시로 1학년 전체 병합, 2학년은 일부 병합, 4학년 전체 병합 -->
+        <tr class="major">
+          <td>전공 공부</td>
+          <!-- 1학년 전체 병합 (colspan="4") -->
+          <td colspan="4">1학년 전공 공부</td>
+          <!-- 2학년: 1학기는 개별, 나머지 3셀 병합 -->
+          <td>2학년 1학기</td>
+          <td colspan="3">2학년 나머지 전공</td>
+          <!-- 3학년 개별 셀 -->
+          <td>3학년 1학기</td>
+          <td>3학년 여름 방학</td>
+          <td>3학년 2학기</td>
+          <td>3학년 겨울 방학</td>
+          <!-- 4학년 전체 병합 (colspan="4") -->
+          <td colspan="4">4학년 전공 공부</td>
+        </tr>
+        <!-- 자격증 행 예시 -->
+        <tr class="certificate">
+          <td>자격증</td>
+          <td colspan="2">1학년 일부 자격증</td>
+          <td>1학년 2학기</td>
+          <td>1학년 겨울</td>
+          <td>2학년 1학기</td>
+          <td colspan="2">2학년 일부 자격증</td>
+          <td>2학년 겨울</td>
+          <td colspan="4">3학년 자격증</td>
+          <td>4학년 1학기</td>
+          <td colspan="2">4학년 일부 자격증</td>
+          <td>4학년 겨울</td>
+        </tr>
+        <!-- 어학 행 예시 -->
+        <tr class="language">
+          <td>어학</td>
+          <td>1학년 1학기</td>
+          <td>1학년 여름</td>
+          <td>1학년 2학기</td>
+          <td>1학년 겨울</td>
+          <td colspan="2">2학년 1학기 ~ 여름</td>
+          <td>2학년 2학기</td>
+          <td>2학년 겨울</td>
+          <td>3학년 1학기</td>
+          <td colspan="3">3학년 일부 어학</td>
+          <td colspan="4">4학년 어학 전체</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
